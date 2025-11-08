@@ -1,4 +1,4 @@
-const API_URL = 'http://192.168.1.4:5000';
+const API_URL = 'https://patient-priority-system-backend.onrender.com';
 
 // Function to format date
 function formatDate(dateString) {
@@ -139,4 +139,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (addPatientForm) {
         addPatientForm.addEventListener('submit', addPatient);
     }
+
 });

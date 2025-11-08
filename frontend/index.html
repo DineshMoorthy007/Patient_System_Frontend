@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Emergency Priority System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-hospital-symbol"></i>
+            Emergency Care System
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard">
+            <h1>Patient Emergency Priority System</h1>
+            <p class="dashboard-subtitle">Real-time Patient Management Dashboard</p>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-content">
+                        <h3>Total Patients</h3>
+                        <p id="total-patients">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div class="stat-content">
+                        <h3>High Priority</h3>
+                        <p id="high-priority">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <a href="add_patient.html" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add New Patient
+                </a>
+                <button class="btn btn-secondary" id="refresh-btn">
+                    <i class="fas fa-sync-alt"></i> Refresh List
+                </button>
+            </div>
+
+            <div class="patient-list">
+                <div class="list-header">
+                    <h2><i class="fas fa-clipboard-list"></i> Current Patients</h2>
+                </div>
+                <div class="table-responsive">
+                    <table id="patients-table">
+                        <thead>
+                            <tr>
+                                <th><i class="fas fa-exclamation"></i> Priority</th>
+                                <th><i class="fas fa-user"></i> Name</th>
+                                <th><i class="fas fa-birthday-cake"></i> Age</th>
+                                <th><i class="fas fa-notes-medical"></i> Condition</th>
+                                <th><i class="fas fa-clock"></i> Arrival Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="patients-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Patient Emergency Priority System. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
